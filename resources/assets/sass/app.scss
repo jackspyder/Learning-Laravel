@@ -1,8 +1,98 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import "~bootstrap/scss/bootstrap";
+
+html, body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 200px 50px 301px 301px 301px 301px 301px auto 50px;
+}
+
+header {
+  grid-column: span 12;
+  background-color: #ffe18b;
+}
+
+nav {
+  //grid-row: 2;
+  grid-column: span 12;
+}
+
+.large {
+  grid-column: span 12;
+  //grid-row: span 2;
+}
+
+.medium {
+  grid-column: span 12;
+}
+
+.small {
+  grid-column: span 12;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  body {
+    grid-template-rows: 200px 50px 301px 301px 301px 301px auto 50px;
+  }
+
+  .large {
+    grid-column: span 6;
+    grid-row: span 2;
+  }
+  .medium {
+    grid-column: span 6;
+    grid-row: 5;
+  }
+  .small {
+    grid-column: span 3;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  body {
+    grid-template-rows: 200px 50px 301px 301px auto 50px;
+  }
+  .large {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .medium {
+    grid-column: span 4;
+    grid-row: unset;
+  }
+
+  .small {
+    grid-column: span 2;
+  }
+}
+
+footer {
+  grid-column: 1/span 12;
+  grid-row: 6;
+  background-color: #6e9bff;
+}
